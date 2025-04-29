@@ -1,21 +1,25 @@
 // validatepalindrome.js
 
+//test sensitive data 
+var test_ssn = '222-33-4444';
+
+
 // Predefined array of strings
 const words = ["racecar", "hello", "Level", "I", "world", "mad am", "12321", "not a palindrome"];
 
-// Function to clean a string: make it lowercase and remove spaces
+// Make lowercase and remove spaces
 function cleanString(str) {
     return str.toLowerCase().replace(/\s+/g, '');
 }
 
-// Function to check if a string is a palindrome
+// Is it a string or palindrome
 function isPalindrome(str) {
     const cleaned = cleanString(str);
     const reversed = cleaned.split('').reverse().join('');
     return cleaned === reversed;
 }
 
-// Function to find all palindromes in an array
+// Find all palindromes in an array
 function findPalindromes(arr) {
     const palindromes = [];
 
